@@ -1,6 +1,3 @@
-from audioop import avg
-
-
 def sum_weights(w_beep, w_bop):
     sum = w_beep+w_bop
     return sum
