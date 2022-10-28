@@ -1,6 +1,3 @@
-from pydoc import cli
-
-
 def climb_ladder(num_rem, num_crossed):
     if num_rem>num_crossed:
         print("Still some way to go!")
