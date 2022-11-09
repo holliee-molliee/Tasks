@@ -29,6 +29,16 @@ def display_num_survivors():
             num_survived+=1
     print(f"{num_survived} passengers survived.")
 
+def display_passengers_per_gender():
+    females,males=0,0
+    for record in records:
+        gender = record[4]
+        if gender=="female":
+            females+=1
+        elif gender=="male":
+            males+=1
+    print(f"females: {females}, males: {males}")
+
 def run():
     load_data("titanic.csv")
     print(f"Succesfully loaded {len(records)}\n")
@@ -38,6 +48,8 @@ def run():
         display_passenger_names()
     elif selected_option==2:
         display_num_survivors()
+    elif selected_option==3:
+        display_passengers_per_gender()
     else:
         print("Error! Option not recognized")
 
