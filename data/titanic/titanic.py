@@ -15,11 +15,21 @@ def display_menu():
     action = int(input("Please select one of the following options:\n[1] Display the names of all passengers\n[2] Display the number of passengers that survived\n[3] Display the number of passengers per gender\n[4] Display the number of passengers per age group\n\n"))
     return action
 
+def display_passenger_names():
+    print("The names of passengers are...\n")
+    for record in records:
+        passenger_name=record[3]
+        print(passenger_name)
+
 def run():
     load_data("titanic.csv")
     print(f"Succesfully loaded {len(records)}\n")
     selected_option = display_menu()
-    print(f"You have selection option: {selected_option}")
+    print(f"You have selection option: {selected_option}\n")
+    if selected_option==1:
+        display_passenger_names()
+    else:
+        print("Error! Option not recognized")
 
 if __name__=="__main__":
     run()
